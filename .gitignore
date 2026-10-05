@@ -1,0 +1,16 @@
+﻿# Compiled files
+*.exe
+*.o
+*.obj
+*.out
+
+# Build directories
+build/
+cmake-build-*/
+.vs/
+.vscode/
+
+# IDE files
+*.sln
+*.vcxproj*
+*.user
