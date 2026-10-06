@@ -7,13 +7,15 @@ int main() {
 
     string imie, nazwisko, email;
 
-    cout << "\n" << "Podaj swoje imie: ";
+    cout << "Podaj swoje imie: ";
     cin >> imie;
-    cout << "\n" << "Podaj swoje nazwisko: ";
+    cout << "Podaj swoje nazwisko: ";
     cin >> nazwisko;
-    cout << "\n" << "Podaj swoj email: ";
+    cout << "Podaj swoj email: ";
     getline(cin >> ws, email);
     
 
 
+
+    return 0;
 }
