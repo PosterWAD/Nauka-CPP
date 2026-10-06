@@ -18,14 +18,40 @@ int main(){
         getline(cin >> ws, dzialanie)
         
         if (dzialanie == 1){
-            cout << "Podaj pierwsza liczbe: ";
+            cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
-            cout << "Podaj druga liczbe: ";
+            cout << "\nPodaj druga liczbe: ";
             cin >> b;
-            cout << "Wynik: " << a + b << endl;
+            cout <<"\nWynik: " << a + b << endl;
         }
-        
-        
+        if (dzialanie == 2) {
+            cout << "\nPodaj pierwsza liczbe: ";
+            cin >> a;
+            cout << "\nPodaj druga liczbe: ";
+            cin >> b;
+            cout <<"\nWynik: " << a - b << endl;
+        }
+        if (dzialanie == 3) {
+            cout << "\nPodaj pierwsza liczbe: ";
+            cin >> a;
+            cout << "\nPodaj druga liczbe: ";
+            cin >> b;
+            cout <<"\nWynik: " << a * b << endl;
+        }
+        if (dzialanie == 4) {
+            cout << "\nPodaj pierwsza liczbe: ";
+            cin >> a;
+            cout << "\nPodaj druga liczbe: ";
+            cin >> b;
+            if (b == 0) {
+                cout << "\nNie mozna dzielic przez zero\n";
+            } else {
+                cout <<"\nWynik: " << a / b << endl;
+            }
+        }
+        if (dzialanie == 5) {
+            break;
+        }
     }
 
     return 0;
