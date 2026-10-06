@@ -17,31 +17,29 @@ int main(){
         cout << "Wybierz działanie: ";
         cin >> dzialanie;
         
-        switch (dzialanie){
-        case 1:
+        switch (dzialanie) {
+        case 1:`
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
             cin >> b;
-            cout <<"\nWynik: " << a + b << endl;
+            cout << "\nWynik: " << a + b << endl;
             break;
-        }
         case 2:
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
             cin >> b;
-            cout <<"\nWynik: " << a - b << endl;
-            }
-        case 3: {
+            cout << "\nWynik: " << a - b << endl;
+            break;
+        case 3:
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
             cin >> b;
-            cout <<"\nWynik: " << a * b << endl;
+            cout << "\nWynik: " << a * b << endl;
             break;
-        }
-        case 4:{
+        case 4:
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
@@ -49,13 +47,11 @@ int main(){
             if (b == 0) {
                 cout << "\nNie mozna dzielic przez zero\n";
             } else {
-                cout <<"\nWynik: " << a / b << endl;
+                cout << "\nWynik: " << a / b << endl;
             }
             break;
-        }
-        case 5: {
+        case 5:
             break;
-        }
         default:
             cout << "\nNieprawidlowe dzialanie\n";
             break;
