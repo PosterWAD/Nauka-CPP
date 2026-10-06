@@ -5,7 +5,7 @@
 int main(){
     
     int dzialanie;
-    int a, b;
+    double a, b;
 
     while(true){
         
@@ -17,28 +17,31 @@ int main(){
         cout << "Wybierz działanie: ";
         cin >> dzialanie;
         
-        if (dzialanie == 1){
+        switch (dzialanie){
+        case 1:
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
             cin >> b;
             cout <<"\nWynik: " << a + b << endl;
+            break;
         }
-        if (dzialanie == 2) {
+        case 2:
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
             cin >> b;
             cout <<"\nWynik: " << a - b << endl;
-        }
-        if (dzialanie == 3) {
+            }
+        case 3: {
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
             cin >> b;
             cout <<"\nWynik: " << a * b << endl;
+            break;
         }
-        if (dzialanie == 4) {
+        case 4:{
             cout << "\nPodaj pierwsza liczbe: ";
             cin >> a;
             cout << "\nPodaj druga liczbe: ";
@@ -48,8 +51,13 @@ int main(){
             } else {
                 cout <<"\nWynik: " << a / b << endl;
             }
+            break;
         }
-        if (dzialanie == 5) {
+        case 5: {
+            break;
+        }
+        default:
+            cout << "\nNieprawidlowe dzialanie\n";
             break;
         }
     }
