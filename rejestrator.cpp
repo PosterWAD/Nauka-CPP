@@ -15,7 +15,7 @@ int main() {
     getline(cin >> ws, email);
     
     cout << "Witaj, " << imie << " " << nazwisko << "!" << "\nTwoj email: " << email;
-    cout << "Dlugosc emaila: " << email.length() << "\n";
+    cout << "\nDlugosc emaila: " << email.length() << "\n";
 
     auto czy_znak = email.find('@');
     if (czy_znak != string::npos) {
@@ -23,7 +23,6 @@ int main() {
     }else {
         cout << "Email jest niepoprawny";
     }
-
 
     return 0;
 }
