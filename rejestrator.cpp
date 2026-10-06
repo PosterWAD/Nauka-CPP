@@ -14,7 +14,15 @@ int main() {
     cout << "Podaj swoj email: ";
     getline(cin >> ws, email);
     
+    cout << "Witaj, " + imie + " " + nazwisko + "!" + "\nTwoj email: " + email;
+    cout << "Dlugosc emaila: " + email.length() + "\n";
 
+    auto czy_znak = email.find(@);
+    if (czy_znak == true) {
+        cout << "Email jest poprawny"
+    }else {
+        cout << "Email jest niepoprawny";
+    }
 
 
     return 0;
