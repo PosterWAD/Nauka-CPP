@@ -5,6 +5,7 @@
 int main(){
     
     int dzialanie;
+    int a, b;
 
     while(true){
         
@@ -16,6 +17,13 @@ int main(){
         cout << "Wybierz działanie: ";
         getline(cin >> ws, dzialanie)
         
+        if (dzialanie == 1){
+            cout << "Podaj pierwsza liczbe: ";
+            cin >> a;
+            cout << "Podaj druga liczbe: ";
+            cin >> b;
+            cout << "Wynik: " << a + b << endl;
+        }
         
         
     }
