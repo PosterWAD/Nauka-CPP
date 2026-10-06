@@ -15,7 +15,7 @@ int main(){
         cout << "4. Dzielenie\n";
         cout << "5. Wyjście\n";
         cout << "Wybierz działanie: ";
-        getline(cin >> ws, dzialanie)
+        cin >> dzialanie;
         
         if (dzialanie == 1){
             cout << "\nPodaj pierwsza liczbe: ";
