@@ -15,7 +15,9 @@ int main() {
         cout << "Nie podano zdania" << endl;
         return 1;
     }
-
+    else if (zdanie.find("kurwa") == true) {
+        
+    }
 
 
 
