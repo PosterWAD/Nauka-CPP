@@ -23,22 +23,23 @@
 #include <string>
 using namespace std;
 
-// Tu napisz funkcję dlugoscSlowa():
+int dlugoscSlowa(const string &s) { return s.length(); }
 
-
-// BONUS — Tu napisz funkcję zamienNaWielkie():
-
+void zamienNaWielkie(string &s) {
+  for (int i = 0; i < s.length(); i++) {
+    s[i] = toupper(s[i]);
+  }
+}
 
 int main() {
 
-    string tekst = "Ucze sie C++";
+  string tekst = "Ucze sie C++";
 
-    cout << "Tekst: " << tekst << endl;
-    cout << "Dlugosc: " << /* wywołaj dlugoscSlowa() */ 0 << endl;
+  cout << "Tekst: " << tekst << endl;
+  cout << "Dlugosc: " << dlugoscSlowa(tekst) << endl;
 
-    // BONUS:
-    // zamienNaWielkie(tekst);
-    // cout << "Wielkie: " << tekst << endl;
+  zamienNaWielkie(tekst);
+  cout << "Wielkie: " << tekst << endl;
 
-    return 0;
+  return 0;
 }
