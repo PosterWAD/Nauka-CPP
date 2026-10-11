@@ -1,15 +1,3 @@
-// ============================================
-// Faza 1 — Referencje, Zadanie 01
-// ============================================
-// ZADANIE:
-// Napisz funkcję void podwoj(int& n) która podwaja wartość zmiennej.
-// Wywołaj ją w main() i wypisz wynik przed i po wywołaniu.
-//
-// WSKAZÓWKA:
-// W C robiłeś to wskaźnikiem:  void podwoj(int *n) { *n = *n * 2; }
-// W C++ użyj referencji:       void podwoj(int& n) { ... }
-// ============================================
-
 #include <iostream>
 using namespace std;
 
