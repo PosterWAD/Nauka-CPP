@@ -1,19 +1,17 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
 int main() {
-
-  vector<int> liczby;
+  std::vector<int> liczby;
   int x;
   for (int i = 0; i < 5; i++) {
-    cout << "Podaj liczbe " << i + 1 << ": ";
-    cin >> x;
+    std::cout << "Podaj liczbe " << i + 1 << ": ";
+    std::cin >> x;
     liczby.push_back(x);
   }
-
+  std::cout << "Oto twój wektor: ";
   for (auto liczba : liczby) {
-    cout << liczba + " ";
+    std::cout << liczba << " ";
   }
 
   return 0;
