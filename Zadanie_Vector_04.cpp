@@ -43,12 +43,10 @@ int main() {
         cout << sort_b[i] << " ";
     }
     cout << endl;
-    auto srodkowy_element = liczby.size()/2;
     if (liczby.size() % 2 == 0){
-        cout << "Mediana: " << float((liczby[srodkowy_element-1] + liczby[srodkowy_element])/2) << endl;
+        cout << "Mediana: " << float((liczby[liczby.size()/2] + liczby[liczby.size()/2-1])/2.0) << endl;
     } else {
-        cout << "Mediana: " << liczby[srodkowy_element] << endl;
+        cout << "Mediana: " << liczby[liczby.size()/2] << endl;
     }
-    cin >> n;
     return 0;
 }
