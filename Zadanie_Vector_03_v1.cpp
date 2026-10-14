@@ -35,6 +35,5 @@ int main() {
     cout << "Suma: " << suma(liczby) << endl;
 
     cout << "Srednia: " << srednia(liczby) << endl;
-    cin >> n;
     return 0;
 }
