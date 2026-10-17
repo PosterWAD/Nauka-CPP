@@ -29,17 +29,26 @@ using namespace std;
 
 int main() {
 
-    // Stwórz macierz 3x3:
+  // Stwórz macierz 3x3:
+  vector<vector<int>> matrix(3, vector<int>(3));
+  int x = 1;
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      matrix[i][j] = x++;
+    }
+  }
 
+  // Wypisz macierz jako tabelę:
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      cout << matrix[i][j] << " ";
+    }
+    cout << endl;
+  }
 
-    // Wypisz macierz jako tabelę:
+  // Oblicz sumę głównej przekątnej:
 
+  // BONUS: Oblicz sumę drugiej przekątnej:
 
-    // Oblicz sumę głównej przekątnej:
-
-
-    // BONUS: Oblicz sumę drugiej przekątnej:
-
-
-    return 0;
+  return 0;
 }
