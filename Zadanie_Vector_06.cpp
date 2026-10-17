@@ -1,28 +1,3 @@
-// ============================================
-// Faza 2 — Vector, Zadanie 06
-// ============================================
-// ZADANIE:
-// Stwórz macierz 3x3 jako vector<vector<int>>.
-// Wypełnij ją liczbami od 1 do 9.
-// Wypisz macierz w formie tabeli.
-// Oblicz i wypisz sumę przekątnej (1 + 5 + 9 = 15).
-//
-// To odpowiednik Twojego "Matrix5 Summing up diagonal.c"!
-//
-// PODPOWIEDŹ:
-// vector<vector<int>> macierz = {
-//     {1, 2, 3},
-//     {4, 5, 6},
-//     {7, 8, 9}
-// };
-//
-// Przekątna to elementy gdzie wiersz == kolumna:
-// macierz[0][0], macierz[1][1], macierz[2][2]
-//
-// BONUS: Oblicz też sumę drugiej przekątnej (3 + 5 + 7 = 15)
-//        Indeksy: macierz[i][n-1-i]
-// ============================================
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -32,6 +7,8 @@ int main() {
   // Stwórz macierz 3x3:
   vector<vector<int>> matrix(3, vector<int>(3));
   int x = 1;
+  int suma = 0;
+  int suma2 = 0;
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
       matrix[i][j] = x++;
@@ -47,8 +24,24 @@ int main() {
   }
 
   // Oblicz sumę głównej przekątnej:
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (i == j) {
+        suma += matrix[i][j];
+      }
+    }
+  }
+  cout << "Suma przekatnej: " << suma << endl;
 
   // BONUS: Oblicz sumę drugiej przekątnej:
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      if (i + j == 2) {
+        suma2 += matrix[i][j];
+      }
+    }
+  }
+  cout << "Suma drugiej przekatnej: " << suma2 << endl;
 
   return 0;
 }
