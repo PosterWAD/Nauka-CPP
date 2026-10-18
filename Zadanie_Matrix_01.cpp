@@ -20,40 +20,58 @@
 // m[i][j] wciąż odnosi się do wiersza i, kolumny j!
 // ============================================
 
+#include <iomanip> // dla setw()
 #include <iostream>
 #include <vector>
-#include <iomanip> // dla setw()
 using namespace std;
 
 // Tu napisz funkcję wypiszMacierz:
-void wypiszMacierz(const vector<vector<int>>& m) {
-    // Użyj const auto& wiersz : m
+void wypiszMacierz(const vector<vector<int>> &m) {
+  for (int i = 0; i < m.size(); i++) {
+    for (int j = 0; j < m[i].size(); j++) {
+      cout << "[" << m[i][j] << "] ";
+    }
+    cout << endl;
+  }
 }
 
 int main() {
-    int n, m;
-    cout << "Podaj liczbe wierszy (N): ";
-    cin >> n;
-    cout << "Podaj liczbe kolumn (M): ";
-    cin >> m;
+  int N, M;
+  cout << "Podaj liczbe wierszy (N): ";
+  cin >> N;
+  cout << "Podaj liczbe kolumn (M): ";
+  cin >> M;
 
-    // 1. Utwórz macierz N x M:
+  // 1. Utwórz wektor 2D: vector<vector<int>> macierz(N, vector<int>(M));
+  vector<vector<int>> macierz(N, vector<int>(M));
 
+  // 2. Wypełnij macierz:
+  cout << "Podaj liczby dla macierzy: ";
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+      cin >> macierz[i][j];
+    }
+  }
+  cout << "\nOto macierz:\n";
+  wypiszMacierz(macierz);
 
-    // 2. Wypełnij macierz:
+  cout << "\n--- Sumy wierszy ---\n";
+  for (int i = 0; i < N; i++) {
+    int suma = 0;
+    for (int j = 0; j < M; j++) {
+      suma += macierz[i][j];
+    }
+    cout << "Suma wiersza " << i << " :" << suma << endl;
+  }
 
+  cout << "\n--- Sumy kolumn ---\n";
+  for (int i = 0; i < M; i++) {
+    int suma = 0;
+    for (int j = 0; j < N; j++) {
+      suma += macierz[j][i];
+    }
+    cout << "Suma kolumny " << i << " :" << suma << endl;
+  }
 
-    cout << "\nOto macierz:\n";
-    // wypiszMacierz(macierz);
-
-
-    cout << "\n--- Sumy wierszy ---\n";
-    // Oblicz i wypisz sumę każdego wiersza:
-
-
-    cout << "\n--- Sumy kolumn ---\n";
-    // Oblicz i wypisz sumę każdej kolumny:
-
-
-    return 0;
+  return 0;
 }
