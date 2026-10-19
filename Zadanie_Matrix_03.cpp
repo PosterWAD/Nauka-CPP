@@ -36,7 +36,5 @@ int main() {
 
   cout << "\nMacierz po transpozycji (4x2):\n";
   wypiszMacierz(AT);
-  int x;
-  cin >> x;
   return 0;
 }
