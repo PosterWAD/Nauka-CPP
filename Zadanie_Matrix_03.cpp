@@ -38,11 +38,15 @@ void wypiszMacierz(const vector<vector<int>>& m) {
 
 // Napisz funkcję transponuj:
 vector<vector<int>> transponuj(const vector<vector<int>>& m) {
-    // 1. Pobierz wiersze i kolumny macierzy m:
-    // 2. Utwórz wynik o wymiarach kolumny x wiersze:
-    // 3. Wypełnij w podwójnej pętli:
-    
-    return {}; // zmień to
+    int wiersze = m.size();
+    int kolumny = m[0].size();
+    vector<vector<int>> wynik(kolumny, vector<int>(wiersze));
+
+    for (int i = 0; i < kolumny; i++) {
+        for (int j = 0; j < wiersze; j++)
+            wynik[i][j] = m[j][i];        
+    }
+    return wynik;
 }
 
 int main() {
@@ -59,6 +63,7 @@ int main() {
 
     cout << "\nMacierz po transpozycji (4x2):\n";
     wypiszMacierz(AT);
-
+    int x;
+    cin >> x;
     return 0;
 }
