@@ -20,6 +20,7 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
+#include <random>
 using namespace std;
 
 void wypiszMacierz(const vector<vector<int>>& m) {
@@ -33,22 +34,41 @@ void wypiszMacierz(const vector<vector<int>>& m) {
 
 // Napisz funkcję znajdzEkstrema:
 void znajdzEkstrema(const vector<vector<int>>& m) {
-    // Twoja implementacja...
+  int minVal = m[0][0], maxVal = m[0][0];
+  int minR = 0, maxR = 0;
+  int minC = 0, maxC = 0;
+    for (int i = 0; i < m.size(); i ++) {
+        for (int j = 0; j < m[i].size(); j++) {
+            if (m[i][j] < minVal) {
+                minVal = m[i][j];
+                minR = i;
+                minC = j;
+            } 
+            if (m[i][j] > maxVal) {
+                maxVal = m[i][j];
+                maxR = i;
+                maxC = j;
+            }
+        }
+    }
+    cout << "Min: " << minVal << " o wspolrzednych " << minR << ", " << minC << endl;
+    cout << "Max: " << maxVal << " o wspolrzednych " << maxR << ", " << maxC << endl;
 }
 
 int main() {
     // Przykładowa macierz 3x4:
-    vector<vector<int>> macierz = {
-        { 12,  -5,  44,   3 },
-        { 99,   0, -18,   7 },
-        { 25,  61,   8, -32 }
-    };
-
+    vector<vector<int>> macierz(3, vector<int>(4));
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            macierz[i][j] = (rand() % 10) - 5;
+        }
+    }
     cout << "Macierz testowa:\n";
     wypiszMacierz(macierz);
 
     cout << "\nWyniki wyszukiwania:\n";
     znajdzEkstrema(macierz);
-
+    int x;
+    cin >> x;
     return 0;
 }
