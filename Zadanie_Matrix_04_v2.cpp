@@ -1,35 +1,4 @@
-// ============================================
-// Faza 2 (Macierze) — Zadanie M04: Obrót Macierzy o 90 Stopni
-// ============================================
-// ZADANIE:
-// Obróć kwadratową macierz N x N o 90 stopni zgodnie z ruchem wskazówek zegara.
-// Jest to klasyczny problem w gamedevie (np. obracanie klocków w Tetrisie)
-// oraz na rozmowach rekrutacyjnych!
-//
-// PRZYKŁAD (3x3):
-// Przed obrotem:          Po obrocie o 90°:
-//   1  2  3                 7  4  1
-//   4  5  6       ===>      8  5  2
-//   7  8  9                 9  6  3
-//
-// 💡 GENIALNY TRIK ALKOMETRYCZNY (metoda 2 kroków):
-// Krok 1: Wykonaj transpozycję macierzy (zamień wiersze z kolumnami).
-//   1  4  7
-//   2  5  8
-//   3  6  9
-// Krok 2: Odwróć kolejność elementów w KAŻDYM wierszu!
-//   Możesz użyć std::reverse(wiersz.begin(), wiersz.end()) z <algorithm>!
-//   Wiersz 1: 1 4 7  ->  7 4 1
-//   Wiersz 2: 2 5 8  ->  8 5 2
-//   Wiersz 3: 3 6 9  ->  9 6 3
-// I BUM! Macierz jest obrócona o 90 stopni!
-//
-// 1. Zaimplementuj funkcję:
-//    void obroc90(vector<vector<int>>& m)
-// 2. Przetestuj ją na macierzy 3x3 lub 4x4.
-// ============================================
-
-#include <algorithm> // dla reverse() i swap()
+#include <algorithm>
 #include <iomanip>
 #include <iostream>
 #include <vector>
