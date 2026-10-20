@@ -48,19 +48,22 @@ vector<vector<int>> pomnoz(const vector<vector<int>>& A, const vector<vector<int
     int wierszeB = B.size();
     int kolumnyB = B[0].size();
 
-    // 1. Sprawdź warunek poprawności mnożenia:
     if (kolumnyA != wierszeB) {
         cout << "BŁĄD: Nie można pomnożyć macierzy! Wymiary się nie zgadzają.\n";
         return {};
     }
 
-    // 2. Utwórz macierz C o wymiarach wierszeA x kolumnyB wypełnioną zerami:
-    
+    vector<vector<int>> C(wierszeA, vector<int>(kolumnyB));
 
-    // 3. Oblicz iloczyn w 3 pętlach:
+    for (int i = 0; i < wierszeA; i++) {
+        for (int j = 0; j < kolumnyB; j++) {
+            for (int k = 0; k < kolumnyA; k++) { //LUB wierszeB
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
 
-
-    return {}; // zmień to
+    return C;
 }
 
 int main() {
