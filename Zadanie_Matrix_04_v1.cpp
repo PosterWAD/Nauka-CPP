@@ -39,7 +39,11 @@ void obroc90wprawo(vector<vector<int>> &m) {
 
 int main() {
   vector<vector<int>> macierz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-
+  int wiersze = macierz.size();
+  int kolumny = macierz[0].size();
+  cout << "Wiersze: " << wiersze << endl;
+  cout << "Kolumny: " << kolumny << endl;
+  
   cout << "Przed obrotem:\n";
   wypiszMacierz(macierz);
 
