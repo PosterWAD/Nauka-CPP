@@ -45,8 +45,23 @@ void wypiszMacierz(const vector<vector<int>>& m) {
 }
 
 bool czyMagiczny(const vector<vector<int>>& m) {
-    // Twoja implementacja...
-    return false;
+    int w = m.size();
+    int k = m[0].size();
+    if (w != k) return false; //sprawdzenie czy macierz jest kwadratowa
+    int sum1 = 0, sum2 = 0, diag1 = 0, diag2 = 0;
+    for (int i = 0; i < w; i) {
+        diag1 += m[i][i];
+        diag2 += m[i][k - i - 1];
+        for (int j = 0; j < k; j++) {
+            sum1 += m[i][j];
+            sum2 += m[j][i];
+        }
+        if (sum1 == sum2) {
+            i++;
+        }
+        else return false;
+    }
+    return ((diag1 == sum2/w) && (diag2 == sum1/w)) ? true : false;
 }
 
 int main() {
