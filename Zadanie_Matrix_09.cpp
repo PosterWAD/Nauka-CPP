@@ -66,46 +66,6 @@ bool czyBezpieczne(const vector<vector<char>>& plansza, int r, int c) {
 }
 
 int main() {
-    // Stwórz planszę 8x8:
-    vector<vector<char>> plansza(8, vector<char>(8));
-
-    // CZĘŚĆ 1: Wypełnij szachownicę ('.' i '#'):
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            plansza[i][j] = ((i + j) % 2 == 0) ? '.' : '#';
-        }
-    }
-
-    cout << "=== SZACHOWNICA Z HETMANAMI ===\n\n";
-    wypiszPlansze(plansza);
-
-    // CZĘŚĆ 3: Pętla umieszczania hetmanów
-    while (true) {
-        int r, c;
-        cout << "\nPodaj wiersz i kolumne (0-7) lub -1 aby zakonczyc: ";
-        cin >> r;
-        if (r == -1) break;
-        cin >> c;
-
-        if (r < 0 || r > 7 || c < 0 || c > 7) {
-            cout << "Wspolrzedne poza plansza!\n";
-            continue;
-        }
-
-        if (plansza[r][c] == 'Q') {
-            cout << "Tu juz stoi hetman!\n";
-            continue;
-        }
-
-        if (czyBezpieczne(plansza, r, c)) {
-            plansza[r][c] = 'Q';
-            cout << "Hetman postawiony na [" << r << "," << c << "]!\n";
-        } else {
-            cout << "Pole atakowane! Nie mozna tu postawic hetmana.\n";
-        }
-
-        wypiszPlansze(plansza);
-    }
 
     return 0;
 }
