@@ -17,7 +17,7 @@ bool czyMagiczny(const vector<vector<int>>& m) {
     int k = m[0].size();
     if (w != k) return false; //sprawdzenie czy macierz jest kwadratowa
     int sum1 = 0, sum2 = 0, diag1 = 0, diag2 = 0;
-    for (int i = 0; i < w; i) {
+    for (int i = 0; i < w;) {
         diag1 += m[i][i];
         diag2 += m[i][k - i - 1];
         for (int j = 0; j < k; j++) {

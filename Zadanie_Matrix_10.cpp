@@ -9,7 +9,11 @@
 //    Użytkownik podaje numery dwóch wierszy (np. 0 i 2).
 //    Zamieniasz je miejscami.
 //    WSKAZÓWKA: swap(m[w1], m[w2]); — to zamienia CAŁE wektory!
-//
+//    for (int i = 0; i < m.size(); i++) {
+//        for (int j = 0; j < m[0].size(); j++) {
+//            int temp = 
+//          }
+//  }
 // 2. Zamień dwie kolumny
 //    Użytkownik podaje numery dwóch kolumn (np. 1 i 3).
 //    Musisz przejść po KAŻDYM wierszu i zamienić elementy:
