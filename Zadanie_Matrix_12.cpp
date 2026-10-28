@@ -61,7 +61,7 @@ int policzSasiadow(const vector<vector<int>>& m, int r, int c) {
     for (int di = -1; di <= 1; di++) {
         for (int dj = -1; dj <= 1; dj++) {
             if (di == 0 && dj == 0) continue; // pomijam siebie
-
+            m[0].size()
             int nr = r + di;
             int nc = c + dj;
 
